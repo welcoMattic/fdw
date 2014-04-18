@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>La Ferme du Web | Events</title>
+    <meta name="author" content="welcomattic">
+    <meta name="description" content="La Ferme du Web">
+    <meta name="viewport" content="initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/normalize.css" media="screen">
+    <link rel="stylesheet" href="styles/style.css" media="screen">
+    <link rel="stylesheet" href="styles/bxslider.css" media="screen">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script type="text/javascript" src="scripts/json2.js"></script>
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jquery.bxslider.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="scripts/underscore-min.js"></script>
+    <script type="text/javascript" src="scripts/moment.js"></script>
+    <script type="text/javascript" src="scripts/clndr.min.js"></script>
+    <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </head>
+  <body role="document">
+    <!--[if lt IE 10]>
+        <p class="browsehappy">Vous utilisez un navigateur <strong>obsolète</strong>. Merci de <a href="http://browsehappy.com/">le mettre à jour</a> pour profiter au maximum de ce site.</p>
+    <![endif]-->
+    
+    <header role="banner">
+      <div class="wrapper">
+        <a href="index.html" rel="home">
+          <h1>La Ferme du Web</h1>
+        </a>
+        <div class="btn-nav">
+          <div class="bigmac"></div>
+        </div>
+        <nav role="navigation">
+          <ul class="list-inline">
+            <li><a href="index.html" rel="home">La Ferme</a>
+            </li><li><a href="tutos.html">Tutos</a>
+            </li><li><a href="events.html" class="is-active">Events</a>
+            </li><li><a href="contact.html">Contact</a>
+            </li><li>
+              <form role="search" action="#">
+                <input type="text" name="search" id="input-search" placeholder="Recherche ..." />
+                <input type="submit" value="Go !" class="btn btn-small">
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="wrapper">
+      <div role="main">
+
+        <h2>Events</h2>
+
+        <div class="calendar">
+          <script type="text/template" id="template-calendar">
+            <div class="clndr-controls"><div class="clndr-previous-button"><</div><div class="month"><%= month %></div><div class="clndr-next-button">></div>
+            </div>
+            <div class="clndr-grid">
+              <div class="days">
+                <div class="headers"><% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+                </div>
+                <% _.each(days, function(day) { %><div class="<%= day.classes %>"><% if(day.events.length > 0) { %><a href="event.html"><%= day.day %><% _.each(day.events, function(event) { %><br /><span class="event-name"><%= event.title %></span><% }); %></a><% } else { %><%= day.day %><% } %></div><% }); %>
+              </div>
+            </div>
+          </script>
+        </div>
+
+      </div><aside role="complementary">
+      <h2>Veille Twitter</h2>
+        <div class="twitter bloc">
+          <ul class="bxslider">
+            <li><blockquote class="twitter-tweet" lang="fr" data-conversation="none" data-cards="hidden" align="center" width="300"><p>SpinKit: Une collection de spinners / loaders CSS design: <a href="http://t.co/LbfchRF9ZH">http://t.co/LbfchRF9ZH</a> <a href="https://twitter.com/search?q=%23fdw&amp;src=hash">#fdw</a> <a href="https://twitter.com/search?q=%23loaders&amp;src=hash">#loaders</a> <a href="https://twitter.com/search?q=%23spinners&amp;src=hash">#spinners</a> <a href="https://twitter.com/search?q=%23chargement&amp;src=hash">#chargement</a></p>&mdash; DJo (@LaFermeDuWeb) <a href="https://twitter.com/LaFermeDuWeb/statuses/413207039851364352">18 Décembre 2013</a></blockquote>
+            </li><li><blockquote class="twitter-tweet" lang="fr" data-conversation="none" data-cards="hidden" align="center" width="300"><p>jQuery Audit: Une extension Chrome pour encore mieux debug du code jQuery: <a href="http://t.co/7Qf0MHMQU1">http://t.co/7Qf0MHMQU1</a> <a href="https://twitter.com/search?q=%23fdw&amp;src=hash">#fdw</a> <a href="https://twitter.com/search?q=%23debug&amp;src=hash">#debug</a> <a href="https://twitter.com/search?q=%23jquery&amp;src=hash">#jquery</a> <a href="https://twitter.com/search?q=%23chrome&amp;src=hash">#chrome</a></p>&mdash; DJo (@LaFermeDuWeb) <a href="https://twitter.com/LaFermeDuWeb/statuses/413204541455474688">18 Décembre 2013</a></blockquote>
+            </li><li><blockquote class="twitter-tweet" lang="fr" data-conversation="none" data-cards="hidden" align="center" width="300"><p>Bien démarrer avec les pages Github: <a href="http://t.co/3rPykkpMtn">http://t.co/3rPykkpMtn</a> <a href="https://twitter.com/search?q=%23fdw&amp;src=hash">#fdw</a> <a href="https://twitter.com/search?q=%23pages&amp;src=hash">#pages</a> <a href="https://twitter.com/search?q=%23github&amp;src=hash">#github</a> <a href="https://twitter.com/search?q=%23jekyll&amp;src=hash">#jekyll</a></p>&mdash; DJo (@LaFermeDuWeb) <a href="https://twitter.com/LaFermeDuWeb/statuses/413202103407222784">18 Décembre 2013</a></blockquote>
+            </li><li><blockquote class="twitter-tweet" lang="fr" data-conversation="none" data-cards="hidden" align="center" width="300"><p>Un PSD gratuit pour faire un showcase d&#39;app web <a href="https://twitter.com/search?q=%23responsive&amp;src=hash">#responsive</a> dans un style Flat: <a href="http://t.co/rGiwH7uaO8">http://t.co/rGiwH7uaO8</a> <a href="https://twitter.com/search?q=%23fdw&amp;src=hash">#fdw</a> <a href="https://twitter.com/search?q=%23psd&amp;src=hash">#psd</a> <a href="https://twitter.com/search?q=%23showcase&amp;src=hash">#showcase</a> <a href="https://twitter.com/search?q=%23mockups&amp;src=hash">#mockups</a></p>&mdash; DJo (@LaFermeDuWeb) <a href="https://twitter.com/LaFermeDuWeb/statuses/412852206715809792">17 Décembre 2013</a></blockquote></li>
+          </ul>
+        </div>
+        <h2>Actus</h2>
+        <div class="actus bloc">
+          <article>
+            <figure class="thumbnail">
+              <a href="article.html"><img src="images/dynatable.png" alt="Dynatable" title="Dynatable"></a>
+            </figure><div class="content">
+              <h3><a href="article.html">DYNATABLE.JS</a></h3>
+              <a href="article.html" class="more pull-right btn btn-small">Lire la suite <i class="icon-plus"></i></a>
+            </div>
+          </article>
+          <article>
+            <figure class="thumbnail">
+              <a href="article.html"><img src="images/circular.png" alt="Circular" title="Circular"></a>
+            </figure><div class="content">
+              <h3><a href="article.html">CIRCULAR.JS</a></h3>
+              <a href="article.html" class="more pull-right btn btn-small">Lire la suite <i class="icon-plus"></i></a>
+            </div>
+          </article>
+        </div>
+        <h2>Events</h2>
+        <div class="events bloc">
+          <figure class="thumbnail">
+            <a href="event.html">
+              <img src="images/blend.png" alt="Blend" title="Blend">
+              <figcaption>
+                <p>Blend Web Mix</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="thumbnail">
+            <a href="event.html">
+              <img src="images/leweb.png" alt="LeWeb" title="LeWeb">
+              <figcaption>
+                <p>LeWeb 13'</p>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </aside>
+    </section>
+
+    <footer role="contentinfo">
+      <div class="wrapper disp-t">
+        <small class="disp-tc"> &copy; La Ferme du Web - 2013</small>
+        <ul class="disp-tc list-inline">
+          <li><a href="https://www.facebook.com/lafermeduweb" class="icon-facebook" rel="external">Facebook</a></li>
+          <li><a href="https://twitter.com/LaFermeDuWeb" class="icon-twitter" rel="external">Twitter</a></li>
+        </ul>
+      </div>
+    </footer>
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
